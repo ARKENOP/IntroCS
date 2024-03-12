@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesBasesDuCS", "LesBasesDuCS\LesBasesDuCS.csproj", "{54C1A86A-D2A2-4B4B-AE08-46F85D28B02F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rappels théoriques", "Rappels théoriques", "{123806F7-B4B1-4DA5-9E8C-0B77A5A41282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometrie.BLL", "Geometrie.BLL\Geometrie.BLL.csproj", "{074D81BE-5614-404F-AD04-6F5EF04126C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometrie.BLL.Console", "Geometrie.BLL.Console\Geometrie.BLL.Console.csproj", "{35750330-A612-4B3B-8F6D-AE27E03CEC76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54C1A86A-D2A2-4B4B-AE08-46F85D28B02F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C1A86A-D2A2-4B4B-AE08-46F85D28B02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C1A86A-D2A2-4B4B-AE08-46F85D28B02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C1A86A-D2A2-4B4B-AE08-46F85D28B02F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{074D81BE-5614-404F-AD04-6F5EF04126C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{074D81BE-5614-404F-AD04-6F5EF04126C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{074D81BE-5614-404F-AD04-6F5EF04126C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{074D81BE-5614-404F-AD04-6F5EF04126C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35750330-A612-4B3B-8F6D-AE27E03CEC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35750330-A612-4B3B-8F6D-AE27E03CEC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35750330-A612-4B3B-8F6D-AE27E03CEC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35750330-A612-4B3B-8F6D-AE27E03CEC76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54C1A86A-D2A2-4B4B-AE08-46F85D28B02F} = {123806F7-B4B1-4DA5-9E8C-0B77A5A41282}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05C0DA7C-97BF-4518-9878-32DA6D362013}
+	EndGlobalSection
+EndGlobal
