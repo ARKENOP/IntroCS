@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Geometrie.BLL
 {
-    internal class Quadrilatere : Polygone
+    public class Quadrilatere : Polygone
     {
         public Quadrilatere(Point a, Point b, Point c, Point d) : base(a, b, c, d)
         {

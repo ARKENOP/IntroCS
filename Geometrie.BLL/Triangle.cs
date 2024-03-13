@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Geometrie.BLL
 {
-    internal class Triangle : Polygone
+    public class Triangle : Polygone
     {
         public Triangle(Point a, Point b, Point c): base(a, b, c)
         {

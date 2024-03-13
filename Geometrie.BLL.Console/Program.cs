@@ -1,26 +1,50 @@
 ﻿using Geometrie.BLL;
+using Geometrie.BLL.Exceptions;
+using System.Net.NetworkInformation;
 
-var p = new Point(1,2);
-Console.WriteLine(p);
-// En écriture, ca ne marche pas 
-//p.X= 3;
-var c = new Cercle(2, p);
-Console.WriteLine($"{c} : .{c.CalculerAire()}");
-
-//test du polygone
-var p1 = new Point(0,0);
-var p2 = new Point(1,0);
-var p3 = new Point(1,1);
-var p4 = new Point(0,1);
-var poly = new Polygone(p1, p2, p3);
-Console.WriteLine(poly.CalculerPerimetre());
-
-var listeDeFormes= new List<IForme>();
-listeDeFormes.Add(c);
-listeDeFormes.Add((IForme)poly);
-listeDeFormes.Add(quadri);
-
-foreach (var forme in listeDeFormes)
+try
 {
-    Console.WriteLine($"{item} ### Périmètre : {item.CalculerPerimetre()} ### Aire : {item.});
+	var i = 0;
+	var j = 5 / i;
+
+	var p = new Point(1, 2);
+	var c = new Cercle(2, p);
+
+	//test du polygone
+	var p1 = new Point(0, 0);
+	var p2 = new Point(1, 0);
+	var p3 = new Point(1, 1);
+	var p4 = new Point(0, 1);
+	var tri = new Triangle(p1, p2, p3);
+	var quadri = new Quadrilatere(p1, p2, p3, p4);
+
+	var listeDeFormes = new List<IForme>();
+	listeDeFormes.Add(c);
+	listeDeFormes.Add(tri);
+	listeDeFormes.Add(quadri);
+
+	foreach (var item in listeDeFormes)
+	{
+		Console.WriteLine($"{item} ### Périmètre : {item.CalculerPerimetre()} ### Aire : {item.CalculerAire}");
+	}
+}
+catch (DivideByZeroException)
+{
+    Console.WriteLine("Division par zéro");
+}
+catch (ArgumentNullException ex)
+{
+    Console.WriteLine($"Un argument est null : {ex.ParamName}");
+    Console.WriteLine(ex.Message);
+}
+catch (PolygoneException ex)
+{
+    Console.WriteLine("Erreur dans le polygone");
+    Console.WriteLine(ex.Message);
+	Console.WriteLine($"Points : {string.Join(", ", ex.Points)}");
+}
+catch (Exception ex)
+{
+	Console.WriteLine("Une erreur iconnue s'est produite");
+	Console.WriteLine(ex.Message);
 }
