@@ -1,4 +1,8 @@
-﻿namespace LesBasesDuCS
+﻿using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+
+namespace LesBasesDuCS
 {
     internal class Program
     {
@@ -22,7 +26,7 @@
             int taille = 180;
 
             //var le type est réduit par le compilateur
-            var prenom = "Jean"; 
+            var prenom = "Jean";
             #endregion
 
             #region Opérateurs
@@ -133,6 +137,35 @@
             //utiles pour stocker plusieurs valeurs
             //mais du coup pas de typage fort
             var personne = new { Nom = "Dupont", Prénom = "Jean", Age = 25 };
+            #endregion
+            #region méthodes d'extension
+            //on peut ajouter des méthodes à des types existants
+            var chaineDeCaractères = "Check out my gun ahaha";
+            chaineDeCaractères = chaineDeCaractères.MettreEnMajusculeUneLettreSurDeux(); //fonctionne grace à l'ajout du type string dans Extensions
+                                                                                         //chaineDeCaractères=Extensions.MettreEnMajusculeUneLettreSurDeux(chaineDeCaractères);
+            #endregion
+
+            #region LINQ
+            var ListeEntiers = new List<int>();
+            // on ajoute des nombres positifs et négatifs
+            ListeEntiers.Add(1);
+            ListeEntiers.Add(-1);
+            ListeEntiers.Add(2);
+            ListeEntiers.Add(-2);
+            ListeEntiers.Add(3);
+            ListeEntiers.Add(-3);
+            // on filtre les nombres positifs
+            var ListeEntiersPositifs = ListeEntiers.Where(i => i > 0);
+            
+            var listeEntier2 = new List<int>();
+            listeEntier2.Add(1);
+            listeEntier2.Add(2);
+            listeEntier2.Add(3);
+            listeEntier2.Add(4);
+            listeEntier2.Add(5);
+
+            var listeCommune = ListeEntiers.Intersect(listeEntier2);
+
             #endregion
         }
     }
