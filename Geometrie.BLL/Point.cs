@@ -6,6 +6,9 @@
     public class Point
     {
         #region Champs et accesseurs
+
+        public int Id { get; private set; }
+
         private int x;
 
         /// <summary>
@@ -33,6 +36,12 @@
         {
             X = abscisse;
             Y = ordonnée;
+        }
+
+        public Point(int id, int abscisse, int ordonnée)
+            :this(abscisse, ordonnée)
+        {
+            Id = id;
         }
         #endregion
 

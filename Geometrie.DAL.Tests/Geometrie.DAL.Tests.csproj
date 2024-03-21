@@ -26,4 +26,10 @@
     <ProjectReference Include="..\Geometrie.DAL\Geometrie.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="app.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
