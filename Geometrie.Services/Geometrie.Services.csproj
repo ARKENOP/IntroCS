@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Geometrie.BLL\Geometrie.BLL.csproj" />
+    <ProjectReference Include="..\Geometrie.DTO\Geometrie.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,7 +7,7 @@
     {
         #region Champs et accesseurs
 
-        public int Id { get; private set; }
+        public int? Id { get; private set; }
 
         private int x;
 
@@ -38,7 +38,7 @@
             Y = ordonnée;
         }
 
-        public Point(int id, int abscisse, int ordonnée)
+        public Point(int? id, int abscisse, int ordonnée)
             :this(abscisse, ordonnée)
         {
             Id = id;
