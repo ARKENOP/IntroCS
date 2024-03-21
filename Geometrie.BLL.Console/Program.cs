@@ -4,29 +4,29 @@ using System.Net.NetworkInformation;
 
 try
 {
-	var i = 0;
-	var j = 5 / i;
+    var p = new Point(1, 2);
 
-	var p = new Point(1, 2);
-	var c = new Cercle(2, p);
+    //p.Distance(null);
 
-	//test du polygone
-	var p1 = new Point(0, 0);
-	var p2 = new Point(1, 0);
-	var p3 = new Point(1, 1);
-	var p4 = new Point(0, 1);
-	var tri = new Triangle(p1, p2, p3);
-	var quadri = new Quadrilatere(p1, p2, p3, p4);
+    var c = new Cercle(2, p);
 
-	var listeDeFormes = new List<IForme>();
-	listeDeFormes.Add(c);
-	listeDeFormes.Add(tri);
-	listeDeFormes.Add(quadri);
+    //test du polygone
+    var p1 = new Point(0, 0);
+    var p2 = new Point(1, 0);
+    var p3 = new Point(0, 1);
+    var p4 = new Point(0, 1);
+    var tri = new Triangle(p1, p2, p3);
+    var quadri = new Quadrilatere(p1, p2, p3, p4);
 
-	foreach (var item in listeDeFormes)
-	{
-		Console.WriteLine($"{item} ### Périmètre : {item.CalculerPerimetre()} ### Aire : {item.CalculerAire}");
-	}
+    var listeDeFormes = new List<IForme>();
+    listeDeFormes.Add(c);
+    listeDeFormes.Add(tri);
+    listeDeFormes.Add(quadri);
+
+    foreach (var item in listeDeFormes)
+    {
+        Console.WriteLine($"{item} ### Périmètre :{item.CalculerPerimetre()} ### Aire :{item.CalculerAire()}");
+    }
 }
 catch (DivideByZeroException)
 {
@@ -41,10 +41,10 @@ catch (PolygoneException ex)
 {
     Console.WriteLine("Erreur dans le polygone");
     Console.WriteLine(ex.Message);
-	Console.WriteLine($"Points : {string.Join(", ", ex.Points)}");
+    Console.WriteLine($"Points : {string.Join(", ", ex.Points)}");
 }
 catch (Exception ex)
 {
-	Console.WriteLine("Une erreur iconnue s'est produite");
-	Console.WriteLine(ex.Message);
+    Console.WriteLine("Une erreur inconnue s'est produite");
+    Console.WriteLine(ex.Message);
 }

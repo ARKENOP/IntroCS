@@ -1,0 +1,5 @@
+{
+    "ConnectionStrings": {
+        "default": "Data Source=XXX;Initial Catalog=Geometrie;Integrated Security=XXX"
+    }
+}
