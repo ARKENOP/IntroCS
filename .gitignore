@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Geometrie.DAL/app.json
+/Geometrie.DAL.Tests/app.json
