@@ -1,6 +1,11 @@
+using Geometrie.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//On ajoute une instance de la classe Point_Service
+builder.Services.AddSingleton<Point_Service>(new Point_Service());
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
